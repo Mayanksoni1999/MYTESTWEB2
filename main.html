@@ -11,7 +11,7 @@
 		//getting chikey
 		var request = new XMLHttpRequest();
 		var params = 'smiles='+query;
-		request.open("POST","http://www.chemspider.com/InChI.asmx/SMILESToInChI",true);
+		request.open("POST","https://www.chemspider.com/InChI.asmx/SMILESToInChI",true);
 		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		//create callback for success containing the response
 		request.success = function(response) {
