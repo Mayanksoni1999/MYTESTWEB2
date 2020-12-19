@@ -9,24 +9,8 @@
 
 <script type="text/javascript">
 	function okfunt(){
-		query = "C#C"
-        console.log(query)
-		//getting chikey
-		var request = new XMLHttpRequest();
-		var params = 'smiles='+query;
-		request.open("POST","https://www.chemspider.com/InChI.asmx/SMILESToInChI",true);
-		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-		//create callback for success containing the response
-		request.success = function(response) {
-		    console.log(response);
-		    document.getElementById("respt").value = response;
-		};
-		//and a fail callback containing the error
-		request.fail = function(error) {
-		    console.log(error);
-		};
-		request.send(params);
-
+		query = "CH"
+        	document.getElementById('respt').innerHTML = query;
 	}
 </script>
 
