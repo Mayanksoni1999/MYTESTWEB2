@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+
+<script type="text/javascript">
+	function okfunt(){
+		query = "C#C"
+        console.log(query)
+		//getting chikey
+		var request = new XMLHttpRequest();
+		var params = 'smiles='+query;
+		request.open("POST","http://www.chemspider.com/InChI.asmx/SMILESToInChI",true);
+		request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		//create callback for success containing the response
+		request.success = function(response) {
+		    console.log(response);
+		};
+		//and a fail callback containing the error
+		request.fail = function(error) {
+		    console.log(error);
+		};
+		request.send(params);
+
+	}
+</script>
+
+<body>
+	<h1 onload="okfunt()">
+		
+	</h1>
+</body>
+</html>
